@@ -1,14 +1,17 @@
-let app = require('../server.js') ;
+let app = require('./server.js') ;
 let db = app.get('db');
 
 module.exports = {
   getItems: function(req, res) {
-    db.get_All(function(err, result) {
+    db.get_all(function(err, result) {
+      console.log(err, result)
       res.status(200).send(result);
     });
   },
   addItem: function(req, res) {
+    console.log(req.body);
     db.add_todo(req.body.title, function(err, result) {
+      console.log(err)
       res.status(200).send('Added foo!');
     });
   },
