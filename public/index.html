@@ -1,0 +1,31 @@
+  <!DOCTYPE html>
+  <html ng-app="todofoo">
+      <head>
+      <link rel="stylesheet" href="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+          <title>Angular</title>
+        </head>
+      <body ng-controller="mainCtrl">
+          {{itemInput}}
+          <section>
+            <input type="text" name="" value="" placeholder="Enter Item" ng-model="itemInput">
+            <button type="button" name="button" ng-click="addItem(itemInput)">Add Item</button>
+          </section>
+          <section>
+            <p ng-repeat="item in items" >{{item.title}} <img src="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwij9sWXp7nSAhUo_IMKHS3UDnMQjRwIBw&url=http%3A%2F%2Fbalubes.com%2Fbundles%2Fsonatacore%2Fvendor%2Fionicons%2Fsrc%2F&psig=AFQjCNFE2FD4NX8Gq9N6oSa_jQ1QHp6ysQ&ust=1488595139170364"  ng-click="updateItem(item.title, item.completed)" alt=""><span ng-click="deleteItem(item.title)">X</span></p>
+          </section>
+          <section>
+            <p>List Items</p>
+          </section>
+
+
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
+        <script src="./js/app.js"></script>
+        <script src="./js/services/mainSvc.js"></script>
+        <script src="./js/controllers/mainCtrl.js"></script>
+      </body>
+  </html>

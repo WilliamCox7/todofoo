@@ -1,2 +1,2 @@
-insert into todo( title )
-  values $1
+insert into todo (title, completed)
+  values ($1, false)
