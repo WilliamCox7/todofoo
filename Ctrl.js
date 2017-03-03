@@ -16,7 +16,7 @@ module.exports = {
     });
   },
   updateItem: function(req, res) {
-    db.update_todo(req.body.title, function(err, result) {
+    db.update_todo(req.body.completed, function(err, result) {
       res.status(200).send('Updated foo!');
     });
   },

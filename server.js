@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 
 var massiveInstance = massive.connectSync({
-  connectionString: 'postgres://wzltlsrp:I-xleOsrgRuZrC-c3ABQJi6fSFijXdSy@tantor.db.elephantsql.com:5432/wzltlsrp'
+  connectionString: config.connString
 });
 
 app.set('db', massiveInstance);
@@ -23,4 +23,5 @@ app.delete('/deleteItem', Ctrl.deleteItem);
 
 app.listen(port, function() {
   console.log('port ' + port + ' is listening');
+    setTimeout(1500, console.log('.......foo'));
 });

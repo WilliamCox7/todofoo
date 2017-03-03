@@ -1,0 +1,1 @@
+insert into todo (completed) values ($1)
